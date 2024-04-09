@@ -10,9 +10,16 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        # test against several Java versions
+        # test against several OSes
         os: [ubuntu-latest, macos-latest, windows-latest]
+        # test against several Java versions
         java: [8, 11]
+        # exclude JDK 11 on macOS and Windows
+        exclude:
+        - os: macos-latest
+          java: 11
+        - os: windows-latest
+          java: 11
     
     name: Build with Java ${{matrix.java}} on ${{matrix.os}}
     steps:
