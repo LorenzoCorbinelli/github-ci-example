@@ -1,4 +1,4 @@
-name: Java CI with Maven for P
+name: Java CI with Maven for PR
 
 on:
   pull_request:
