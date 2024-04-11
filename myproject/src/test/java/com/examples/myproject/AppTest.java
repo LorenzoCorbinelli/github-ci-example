@@ -15,8 +15,12 @@ public class AppTest
     }
 
     @Test
-    public void testSayHello()
-    {
+    public void testSayHello() {
         assertEquals("Hello", app.sayHello());
+    }
+    
+    @Test
+    public void testSayHelloWithAName() {
+    	assertEquals("Hello world", app.sayHello("world"));
     }
 }
